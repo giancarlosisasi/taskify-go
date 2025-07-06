@@ -1,0 +1,14 @@
+{
+  "tasks": {
+    "build": {
+      "command": ["echo \"building the project...\""],
+      "dependsOn": ["clean"],
+      "description": "Build the project"
+    },
+    "clean": {
+      "command": ["echo \"cleaning the project...\""],
+      "dependsOn": [],
+      "description": "Clean the project"
+    }
+  }
+}
