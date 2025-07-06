@@ -8,7 +8,7 @@ import (
 func Execute() error {
 	if len(os.Args) < 2 {
 		printUsage()
-		return
+		return nil
 	}
 
 	command := os.Args[1]
@@ -31,10 +31,11 @@ func Execute() error {
 }
 
 func printUsage() {
-	fmt.Println("Taskify - Simple task runner")
+	fmt.Println("Taskify - Simple Task Runner")
 	fmt.Println()
 	fmt.Println("Usage:")
-	fmt.Println("   taskify list                   - List available tasks")
-	fmt.Println("   taskify <task-name>            - Run a predefined task")
-	fmt.Println("   taskify run <command> [args]   - Run a predefined task")
+	fmt.Println("  taskify list                    - List available tasks")
+	fmt.Println("  taskify <task-name>            - Run a predefined task")
+	fmt.Println("  taskify run <command> [args]   - Run arbitrary command")
+	fmt.Println("  taskify help                   - Show this help message")
 }

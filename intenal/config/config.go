@@ -35,6 +35,7 @@ func Load() (*Config, error) {
 	err = json.Unmarshal(file, &config)
 	if err != nil {
 		// TODO: handle all other errors like invalid json file, no content, etc
+		fmt.Printf("%v", err)
 		return nil, fmt.Errorf("failed to parse the config file '%s'. Please make sure it has a valid json", ConfigFileName)
 	}
 
